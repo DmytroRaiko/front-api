@@ -1,0 +1,40 @@
+import {Header} from "./containers/post/header";
+import {PostFooter} from "./containers/post/footer";
+import {PostContent} from "./containers/post/content";
+import {PostHeader} from "./containers/post/post-header";
+import logo from './logo.svg';
+
+import './Post.css';
+
+function Post() {
+    const post = {
+        title: "React. Hello World!",
+        tags: "#course #react #js #javascript",
+        text: "There’s a simple pattern I find immensely useful when writing React applications. If you’ve been doing React for a while, you have probably already discovered it. This article explains it well, but I want to add a few more points. You’ll find your components much easier to reuse and reason about if you divide them into two categories. I call them Container and Presentational components* but I also heard Fat and Skinny, Smart and Dumb, Stateful and Pure, Screens and Components, etc. These all are not exactly the same, but the core idea is similar.",
+        author: "Dmitry Raiko",
+        time: "30.10.2001",
+        img: {
+            //src: "https://i.ytimg.com/vi/RHBfeKNjcmQ/maxresdefault.jpg",
+            src: "https://i1.wp.com/css-tricks.com/wp-content/uploads/2018/06/react-ideal-image.png?fit=1200%2C600&ssl=1",
+            //src: logo,
+            title: "React image"
+        }
+    };
+    console.log(post);
+
+  return (
+        <div className="posts">
+            <header className="header">
+                <Header headerText="First front task" />
+            </header>
+
+            <main className="post-body">
+                <PostHeader postTitle={post.title} postTags={post.tags} />
+                <PostContent postText={post.text} postImg={post.img}/>
+                <PostFooter postAuthor={post.author} postTime={post.time} />
+            </main>
+        </div>
+  );
+}
+
+export default Post;
