@@ -1,9 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node src/app.js",
+    "start-dev": "nodemon src/app.js",
+    "start-debug": "nodemon --inspect src/app.js",
+    "lintjs": "eslint src",
+    "prettier": "prettier --write src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,5 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "dotenv": "^10.0.0",
+    "eslint": "^8.4.1",
+    "prettier": "^2.5.1"
   }
 }
