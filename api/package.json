@@ -8,9 +8,9 @@
     "start-debug": "nodemon --inspect src/app.js",
     "lintjs": "eslint src",
     "prettier": "prettier --write src",
-    "pre-commit": "cd api && eslint src && git add .",
+    "pre-commit": "npx eslint src && git add .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "cd .. && husky install api/.husky"
+    "prepare": "cd .. && husky install ./api/.husky"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +19,8 @@
     "express": "^4.17.1"
   },
   "husky": {
-    "hooks":{
-      "pre-commit": "npm run pre-commit"
+    "hooks": {
+      "pre-commit": "cd api && npm run pre-commit"
     }
   },
   "description": "",
