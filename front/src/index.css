@@ -9,10 +9,17 @@ body {
   background: #f9f9f9;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.header-button-block {
+  display: flex;
+  border-bottom: 1px solid #282c34;
+  justify-content: center;
 }
+
+.header-button-block p {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

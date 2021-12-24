@@ -1,7 +1,7 @@
 import {PostAuthor} from "../../components/post/PostAuthor";
 import {PostTime} from "../../components/post/PostTime";
 
-export function PostFooter({ postAuthor = "Admin", postTime = null }) {
+function PostFooter({ postAuthor = "Admin", postTime = null }) {
 
     return (
         <div className="post-footer">
@@ -10,3 +10,5 @@ export function PostFooter({ postAuthor = "Admin", postTime = null }) {
         </div>
     );
 }
+
+export default PostFooter;

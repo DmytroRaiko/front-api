@@ -1,10 +1,8 @@
-import {Header} from "./containers/post/header";
-import {PostFooter} from "./containers/post/footer";
-import {PostContent} from "./containers/post/content";
-import {PostHeader} from "./containers/post/post-header";
-import logo from './logo.svg';
+import PostHeader from "./PostHeader";
+import PostFooter from "./PostFooter";
+import PostContent from "./PostContent";
 
-import './Post.css';
+import '../Post.css';
 
 function Post() {
     const post = {
@@ -20,21 +18,14 @@ function Post() {
             title: "React image"
         }
     };
-    console.log(post);
 
-  return (
-        <div className="posts">
-            <header className="header">
-                <Header headerText="First front task" />
-            </header>
-
-            <main className="post-body">
-                <PostHeader postTitle={post.title} postTags={post.tags} />
-                <PostContent postText={post.text} postImg={post.img}/>
-                <PostFooter postAuthor={post.author} postTime={post.time} />
-            </main>
-        </div>
-  );
+    return (
+        <main className="post-body">
+            <PostHeader postTitle={post.title} postTags={post.tags} />
+            <PostContent postText={post.text} postImg={post.img}/>
+            <PostFooter postAuthor={post.author} postTime={post.time} />
+        </main>
+    );
 }
 
 export default Post;
